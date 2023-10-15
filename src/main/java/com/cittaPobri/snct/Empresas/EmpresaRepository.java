@@ -7,4 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface EmpresaRepository extends JpaRepository<EmpresaModel, Long> {
     EmpresaModel findEmpresaModelById(Long id);
     Page<EmpresaModel> findAllByAtivoTrue(Pageable pageable);
+    EmpresaModel findByNome(String nome);
 }

@@ -34,7 +34,7 @@ public class EmpresaController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<ExibirEmpresa>> buscarTodasAsEmpresas(@PageableDefault(sort = "nome")Pageable page) {
+    public ResponseEntity<Page<ExibirEmpresa>> buscarTodasAsEmpresas(@PageableDefault(sort = "nome") Pageable page) {
         var empresas = empresaRepository.findAllByAtivoTrue(page).map(ExibirEmpresa::new);
         return ResponseEntity.ok(empresas);
 
