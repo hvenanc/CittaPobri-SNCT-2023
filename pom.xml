@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.cittaPobri</groupId>
 	<artifactId>snct</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>snct</name>
 	<description>Api de Onibus Recife</description>
 	<properties>
@@ -29,6 +29,10 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
