@@ -42,6 +42,9 @@ public class LinhaController {
     @GetMapping("/")
     public ResponseEntity<?> buscarLinhasPorEmpresa(@RequestParam String empresa) {
         var linhas = linhaService.buscarLinhasPorEmpresa(empresa);
+        if (linhas == null) {
+            return ResponseEntity.notFound().build();
+        }
         return ResponseEntity.ok(linhas);
     }
 

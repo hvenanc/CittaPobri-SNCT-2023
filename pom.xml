@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.cittaPobri</groupId>
 	<artifactId>snct</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<name>snct</name>
 	<description>Api de Onibus Recife</description>
 	<properties>
@@ -51,6 +51,11 @@
 		<dependency>
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-mysql</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.2.0</version>
 		</dependency>
 	</dependencies>
 

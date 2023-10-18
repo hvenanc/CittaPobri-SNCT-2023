@@ -31,8 +31,11 @@ public class LinhaService {
 
     public Stream<ExibirLinha> buscarLinhasPorEmpresa(String nome) {
         var empresa =  empresaRepository.findByNome(nome);
-        var linhas = linhaRepository.findAllByEmpresa_IdAndAtivoTrueOrderByCodigo(empresa.getId());
-        return linhas.stream().map(ExibirLinha::new);
+        if(empresa != null) {
+            var linhas = linhaRepository.findAllByEmpresa_IdAndAtivoTrueOrderByCodigo(empresa.getId());
+            return linhas.stream().map(ExibirLinha::new);
+        }
+        return null;
     }
 
     public Stream<InfoLinhas> buscarTodasLinhas(Pageable pageable) {
